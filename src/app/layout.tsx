@@ -1,6 +1,8 @@
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { FramerMotionProvider } from './_providers/framer-motion-provider';
+import { ThemeProvider } from './_providers/theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider>
+          <FramerMotionProvider>{children}</FramerMotionProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
