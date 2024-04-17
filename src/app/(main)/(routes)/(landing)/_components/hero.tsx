@@ -13,7 +13,7 @@ export function Hero() {
       <div className="aurora-flex-shrink-0 aurora-mt-4 md:aurora-mt-0 md:aurora-ml-6 aurora-text-center">
         <div className="aurora-border-2 aurora-border-white aurora-w-[100px] aurora-h-[100px] aurora-inline-block aurora-rounded-full aurora-overflow-hidden">
           <Image
-            src="/favicon.ico"
+            src="/achmdndy.jpeg"
             alt="Profile image"
             width={100}
             height={100}

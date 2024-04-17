@@ -16,7 +16,15 @@ const bioList: BioList[] = [
       'Completed the undergraduate program in Computer Engineering at Gunadarma University',
   },
   {
-    year: '2022 to present',
+    year: '2022',
+    description: 'Worked at PT. Sakata Guna Kita',
+  },
+  {
+    year: '2023',
+    description: 'Worked at Master Bagasi',
+  },
+  {
+    year: '2023 present',
     description: 'Working as a freelancer',
   },
 ];

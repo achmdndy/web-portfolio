@@ -1,9 +1,6 @@
 {
   "name": "web-portfolio",
-  "author": {
-    "name": "Achmad Andy Dekanovy",
-    "email": "achmdndy@gmail.com"
-  },
+  "author": "Achmad Andy Dekanovy<achmdndy@gmail.com>",
   "description": "Web portfolio next js 14",
   "version": "0.1.0",
   "private": true,

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ComponentProps, FC } from 'react';
 import { IoLogoGithub, IoLogoInstagram } from 'react-icons/io5';
+import { SiBuymeacoffee } from 'react-icons/si';
 
 interface SocialList {
   icon: FC<ComponentProps<'svg'>>;
@@ -14,12 +15,17 @@ const socialList: SocialList[] = [
   {
     icon: IoLogoGithub,
     label: '@achmdndy',
-    href: '/',
+    href: 'https://github.com/achmdndy',
   },
   {
     icon: IoLogoInstagram,
     label: '@achmdndy',
-    href: '/',
+    href: 'https://www.instagram.com/achmdn.dy',
+  },
+  {
+    icon: SiBuymeacoffee,
+    label: '@achmdndy',
+    href: 'https://www.buymeacoffee.com/achmdndy',
   },
 ];
 
