@@ -41,7 +41,7 @@ export function Socials() {
           <li key={index}>
             <Link href={href}>
               <Button
-                className="aurora-gap-2 hover:aurora-bg-[#003de6]/10 aurora-text-[#003de6] hover:aurora-text-[#003de6]"
+                className="aurora-gap-2 hover:aurora-bg-[#003de6]/10 dark:hover:aurora-bg-[#003de6]/10 dark:aurora-text-[#003de6] aurora-text-[#003de6] hover:aurora-text-[#003de6]"
                 variant={'ghost'}
               >
                 <Icon className="aurora-w-5 aurora-h-5" />

@@ -38,7 +38,7 @@ export function Work() {
 
       <div className="aurora-flex aurora-items-center aurora-justify-center aurora-my-4">
         <Link href="/works" scroll>
-          <Button className="aurora-gap-2 aurora-bg-[#003de6] aurora-text-white hover:aurora-bg-[#003de6]/80">
+          <Button className="aurora-gap-2 aurora-bg-[#003de6] dark:aurora-bg-[#003de6] dark:hover:aurora-bg-[#003de6]/80 aurora-text-white hover:aurora-bg-[#003de6]/80">
             My portfolio <IoChevronForwardOutline />
           </Button>
         </Link>

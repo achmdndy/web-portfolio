@@ -20,9 +20,9 @@ export function NavbarLink({
       href={href}
       scroll
       className={cn(
-        'aurora-p-2 aurora',
+        'aurora-p-2',
         className,
-        href === pathname ? 'aurora-bg-primary/10' : '',
+        href === pathname ? 'aurora-bg-[#003de6] aurora-text-white' : '',
       )}
       {...props}
     >
