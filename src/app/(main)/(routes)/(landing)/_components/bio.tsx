@@ -13,7 +13,7 @@ const bioList: BioList[] = [
   {
     year: '2022',
     description:
-      'Completed the undergraduate program in Computer Engineering at Gunadarma University',
+      'Completed the undergraduate program in Informatics Engineering at Gunadarma University',
   },
   {
     year: '2022',

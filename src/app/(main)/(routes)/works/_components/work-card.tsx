@@ -21,7 +21,7 @@ export function WorkCard({ id, title, thumbnail, children }: WorkCardProps) {
             loading="lazy"
           />
         </div>
-        <h2 className="aurora-mt-2 a aurora-text-xl">{title}</h2>
+        <h2 className="aurora-mt-2 aurora-font-medium">{title}</h2>
         <p className="aurora-text-sm aurora-line-clamp-2">{children}</p>
       </Link>
     </div>

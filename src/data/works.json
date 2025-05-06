@@ -1,0 +1,175 @@
+{
+  "works": [
+    {
+      "id": "smart-inventory",
+      "title": "Smart Inventory System",
+      "thumbnail": "/logo.png",
+      "summary": "Web-based inventory management system with real-time tracking and analytics features",
+      "description": "An inventory management application that helps businesses track stock, manage orders, and analyze sales performance in real-time.",
+      "features": [
+        "Real-time analytics dashboard",
+        "Automatic stock management",
+        "Low stock notification system",
+        "Sales and purchase reports"
+      ],
+      "technologies": ["React", "Node.js", "MongoDB", "Socket.io"],
+      "period": "September 2023 - December 2023",
+      "links": {
+        "demo": "https://smart-inventory.demo.com",
+        "github": "https://github.com/username/smart-inventory"
+      }
+    },
+    {
+      "id": "healthmate",
+      "title": "HealthMate",
+      "thumbnail": "/images/works/healthmate.jpg",
+      "summary": "Mobile health application for tracking physical activities and daily nutrition",
+      "description": "A mobile application that helps users achieve their health goals with activity tracking, nutrition, and routine reminder features.",
+      "features": [
+        "Physical activity tracking",
+        "Daily nutrition calculator",
+        "Water and exercise reminders",
+        "Health device integration"
+      ],
+      "technologies": ["React Native", "Firebase", "Redux", "Node.js"],
+      "period": "May 2023 - August 2023",
+      "links": {
+        "demo": "https://healthmate.demo.com",
+        "github": "https://github.com/username/healthmate"
+      }
+    },
+    {
+      "id": "taskflow",
+      "title": "TaskFlow",
+      "thumbnail": "/images/works/taskflow.jpg",
+      "summary": "Project management application with team collaboration and time tracking features",
+      "description": "A project management platform that enables teams to collaborate effectively with kanban board, time tracking, and progress reporting features.",
+      "features": [
+        "Kanban board for task management",
+        "Integrated time tracking",
+        "Real-time team collaboration",
+        "Automatic progress reports"
+      ],
+      "technologies": ["Vue.js", "Laravel", "PostgreSQL", "WebSocket"],
+      "period": "February 2023 - April 2023",
+      "links": {
+        "demo": "https://taskflow.demo.com",
+        "github": "https://github.com/username/taskflow"
+      }
+    },
+    {
+      "id": "ai-chatbot",
+      "title": "AI Customer Service Chatbot",
+      "thumbnail": "/images/works/ai-chatbot.jpg",
+      "summary": "AI-powered chatbot for customer service automation",
+      "description": "A chatbot that uses AI technology to provide 24/7 customer service with context understanding and relevant response capabilities.",
+      "features": [
+        "Natural Language Processing",
+        "Adaptive machine learning",
+        "Multi-platform integration",
+        "Customer sentiment analysis"
+      ],
+      "technologies": ["Python", "TensorFlow", "FastAPI", "MongoDB"],
+      "period": "November 2022 - January 2023",
+      "links": {
+        "demo": "https://ai-chatbot.demo.com",
+        "github": "https://github.com/username/ai-chatbot"
+      }
+    },
+    {
+      "id": "ecotrack",
+      "title": "EcoTrack",
+      "thumbnail": "/images/works/ecotrack.jpg",
+      "summary": "Personal carbon footprint tracking application with eco-friendly recommendations",
+      "description": "An application that helps users understand and reduce their carbon footprint through daily activity tracking and eco-friendly lifestyle recommendations.",
+      "features": [
+        "Carbon footprint calculator",
+        "Eco-friendly recommendations",
+        "Carbon reduction progress tracking",
+        "Eco-warriors community"
+      ],
+      "technologies": ["Flutter", "Firebase", "Node.js", "MongoDB"],
+      "period": "August 2022 - October 2022",
+      "links": {
+        "demo": "https://ecotrack.demo.com",
+        "github": "https://github.com/username/ecotrack"
+      }
+    },
+    {
+      "id": "edulearn",
+      "title": "EduLearn LMS",
+      "thumbnail": "/images/works/edulearn.jpg",
+      "summary": "Online learning platform with interactive features and progress tracking",
+      "description": "A Learning Management System that provides interactive learning experiences with video conferencing, online quizzes, and learning progress tracking features.",
+      "features": [
+        "Integrated video conferencing",
+        "Online quizzes and assessments",
+        "Student progress tracking",
+        "Interactive discussion forum"
+      ],
+      "technologies": ["React", "Django", "PostgreSQL", "WebRTC"],
+      "period": "May 2022 - July 2022",
+      "links": {
+        "demo": "https://edulearn.demo.com",
+        "github": "https://github.com/username/edulearn"
+      }
+    },
+    {
+      "id": "fintech-wallet",
+      "title": "FinTech Wallet",
+      "thumbnail": "/images/works/fintech-wallet.jpg",
+      "summary": "Digital wallet with personal finance management features",
+      "description": "A digital wallet application that enables users to manage finances, conduct transactions, and analyze expenses easily.",
+      "features": [
+        "Real-time transactions",
+        "Expense analysis",
+        "Budgeting tools",
+        "Bank integration"
+      ],
+      "technologies": ["React Native", "Node.js", "PostgreSQL", "Redis"],
+      "period": "February 2022 - April 2022",
+      "links": {
+        "demo": "https://fintech-wallet.demo.com",
+        "github": "https://github.com/username/fintech-wallet"
+      }
+    },
+    {
+      "id": "smart-home",
+      "title": "Smart Home Hub",
+      "thumbnail": "/images/works/smart-home.jpg",
+      "summary": "IoT platform for smart home device control and monitoring",
+      "description": "A smart home control system that allows users to control and monitor IoT devices in their homes through mobile or web applications.",
+      "features": [
+        "IoT device control",
+        "Energy monitoring",
+        "Home automation",
+        "Voice command integration"
+      ],
+      "technologies": ["React", "Node.js", "MQTT", "InfluxDB"],
+      "period": "November 2021 - January 2022",
+      "links": {
+        "demo": "https://smart-home.demo.com",
+        "github": "https://github.com/username/smart-home"
+      }
+    },
+    {
+      "id": "food-delivery",
+      "title": "Food Delivery Platform",
+      "thumbnail": "/images/works/food-delivery.jpg",
+      "summary": "Food delivery platform with real-time tracking and rating system",
+      "description": "A food delivery application that connects customers with local restaurants, featuring real-time tracking and rating system.",
+      "features": [
+        "Real-time delivery tracking",
+        "Rating and review system",
+        "Integrated payments",
+        "Restaurant dashboard"
+      ],
+      "technologies": ["React Native", "Node.js", "MongoDB", "Socket.io"],
+      "period": "August 2021 - October 2021",
+      "links": {
+        "demo": "https://food-delivery.demo.com",
+        "github": "https://github.com/username/food-delivery"
+      }
+    }
+  ]
+}
