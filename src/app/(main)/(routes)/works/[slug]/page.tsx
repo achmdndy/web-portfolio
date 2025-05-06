@@ -1,4 +1,5 @@
 import { Section } from '@/components/section';
+import { Button } from '@/components/ui/button';
 import works from '@/data/works.json';
 import { ArrowUpRight, Calendar, Github, Globe } from 'lucide-react';
 import { Metadata } from 'next';
@@ -118,7 +119,7 @@ export default function WorksSlug({ params }: WorksSlugProps) {
                 {work.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="aurora-px-3 aurora-py-1.5 aurora-bg-primary/10 aurora-text-primary aurora-rounded-full aurora-text-sm aurora-font-medium"
+                    className="aurora-px-3 aurora-py-1.5 aurora-bg-[#00F2FF]/10 aurora-text-[#00F2FF] aurora-rounded-full aurora-text-sm aurora-font-medium"
                   >
                     {tech}
                   </span>
@@ -138,37 +139,47 @@ export default function WorksSlug({ params }: WorksSlugProps) {
             </section>
 
             {/* Links */}
-            <section>
-              <h3 className="aurora-text-lg aurora-font-semibold aurora-mb-3">
-                Links
-              </h3>
-              <div className="aurora-space-y-2">
-                {work.links.demo && (
-                  <Link
-                    href={work.links.demo}
-                    className="aurora-flex aurora-items-center aurora-gap-2 aurora-text-primary hover:aurora-underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Globe className="aurora-w-4 aurora-h-4" />
-                    <span>Live Demo</span>
-                    <ArrowUpRight className="aurora-w-4 aurora-h-4" />
-                  </Link>
-                )}
-                {work.links.github && (
-                  <Link
-                    href={work.links.github}
-                    className="aurora-flex aurora-items-center aurora-gap-2 aurora-text-primary hover:aurora-underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Github className="aurora-w-4 aurora-h-4" />
-                    <span>Source Code</span>
-                    <ArrowUpRight className="aurora-w-4 aurora-h-4" />
-                  </Link>
-                )}
-              </div>
-            </section>
+            {(work.links.demo || work.links.github) && (
+              <section>
+                <h3 className="aurora-text-lg aurora-font-semibold aurora-mb-3">
+                  Links
+                </h3>
+                <div className="aurora-space-y-2">
+                  {work.links.demo && (
+                    <Link
+                      href={work.links.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        className="aurora-gap-2 hover:aurora-bg-[#003de6]/10 dark:hover:aurora-bg-[#003de6]/10 dark:aurora-text-[#003de6] aurora-text-[#003de6] hover:aurora-text-[#003de6]"
+                        variant={'ghost'}
+                      >
+                        <Globe className="aurora-w-4 aurora-h-4" />
+                        <span>Live Demo</span>
+                        <ArrowUpRight className="aurora-w-4 aurora-h-4" />
+                      </Button>
+                    </Link>
+                  )}
+                  {work.links.github && (
+                    <Link
+                      href={work.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        className="aurora-gap-2 hover:aurora-bg-[#003de6]/10 dark:hover:aurora-bg-[#003de6]/10 dark:aurora-text-[#003de6] aurora-text-[#003de6] hover:aurora-text-[#003de6]"
+                        variant={'ghost'}
+                      >
+                        <Github className="aurora-w-4 aurora-h-4" />
+                        <span>Source Code</span>
+                        <ArrowUpRight className="aurora-w-4 aurora-h-4" />
+                      </Button>
+                    </Link>
+                  )}
+                </div>
+              </section>
+            )}
           </aside>
         </div>
       </article>
