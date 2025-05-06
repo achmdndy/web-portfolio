@@ -3,7 +3,7 @@ import { Section } from '@/components/section';
 export function Favorite() {
   return (
     <Section delay={0.2}>
-      <h3 className="aurora-text-xl aurora-font-bold aurora-underline aurora-underline-offset-[6px] aurora-decoration-primary/50 aurora-mt-3 aurora-mb-4">
+      <h3 className="aurora-text-xl aurora-font-bold aurora-underline aurora-underline-offset-[6px] aurora-decoration-[4px] aurora-decoration-secondary aurora-mt-3 aurora-mb-4">
         I love
       </h3>
 

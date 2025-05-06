@@ -10,7 +10,7 @@ export default function Posts() {
   return (
     <div className="aurora-container aurora-px-4 aurora-max-w-[60ch]">
       <Section>
-        <h3 className="aurora-text-xl aurora-font-bold aurora-underline aurora-underline-offset-[6px] aurora-decoration-primary/50 aurora-mt-3 aurora-mb-4">
+        <h3 className="aurora-text-xl aurora-font-bold aurora-underline aurora-underline-offset-[6px] aurora-decoration-[4px] aurora-decoration-secondary aurora-mt-3 aurora-mb-4">
           Posts
         </h3>
       </Section>
