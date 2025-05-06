@@ -1,174 +1,174 @@
 {
   "works": [
     {
-      "id": "smart-inventory",
-      "title": "Smart Inventory System",
-      "thumbnail": "/logo.png",
-      "summary": "Web-based inventory management system with real-time tracking and analytics features",
-      "description": "An inventory management application that helps businesses track stock, manage orders, and analyze sales performance in real-time.",
+      "id": "ai-dikti",
+      "title": "AI DIKTI Platform",
+      "thumbnail": "/assets/works/thumb-dikti-ai.png",
+      "summary": "Information platform for AI development in Indonesia with a repository feature for AI-related projects and datasets.",
+      "description": "AI DIKTI is a web-based platform providing information, resources, and a repository for AI research and projects in Indonesia. It aims to support the academic and research community by offering curated content and a collaborative space similar to Kaggle (currently under development).",
       "features": [
-        "Real-time analytics dashboard",
-        "Automatic stock management",
-        "Low stock notification system",
-        "Sales and purchase reports"
+        "Latest news and articles about AI in Indonesia",
+        "Repository for AI projects and datasets (in development)",
+        "Responsive and modern UI with Styled Components"
       ],
-      "technologies": ["React", "Node.js", "MongoDB", "Socket.io"],
-      "period": "September 2023 - December 2023",
+      "technologies": ["React", "Styled Components"],
+      "period": "January 2024 - Present",
       "links": {
-        "demo": "https://smart-inventory.demo.com",
-        "github": "https://github.com/username/smart-inventory"
+        "demo": "https://www.ai-dikti.id/",
+        "github": null
       }
     },
     {
-      "id": "healthmate",
-      "title": "HealthMate",
-      "thumbnail": "/images/works/healthmate.jpg",
-      "summary": "Mobile health application for tracking physical activities and daily nutrition",
-      "description": "A mobile application that helps users achieve their health goals with activity tracking, nutrition, and routine reminder features.",
+      "id": "ai-coe-gunadarma",
+      "title": "AI Center of Excellence Gunadarma",
+      "thumbnail": "/assets/works/thumb-gunadarma-coe.png",
+      "summary": "A platform providing information and resources for AI research and development at Gunadarma University.",
+      "description": "AI Center of Excellence Gunadarma is a web-based platform to facilitate collaboration, research, and dissemination of AI-related activities at Gunadarma University. It provides information on research, events, publications, and acts as a hub for AI enthusiasts in the academic community.",
       "features": [
-        "Physical activity tracking",
-        "Daily nutrition calculator",
-        "Water and exercise reminders",
-        "Health device integration"
+        "News and updates about AI research and activities",
+        "Repository for AI-related projects and publications",
+        "Event and seminar announcements",
+        "Community and collaboration hub",
+        "Admin panel for content management"
       ],
-      "technologies": ["React Native", "Firebase", "Redux", "Node.js"],
-      "period": "May 2023 - August 2023",
+      "technologies": [
+        "React",
+        "Laravel Sanctum",
+        "PostgreSQL",
+        "Styled Components"
+      ],
+      "period": "February 2024 - Present",
       "links": {
-        "demo": "https://healthmate.demo.com",
-        "github": "https://github.com/username/healthmate"
+        "demo": "https://ai-coe.gunadarma.ac.id/",
+        "github": null
       }
     },
     {
-      "id": "taskflow",
-      "title": "TaskFlow",
-      "thumbnail": "/images/works/taskflow.jpg",
-      "summary": "Project management application with team collaboration and time tracking features",
-      "description": "A project management platform that enables teams to collaborate effectively with kanban board, time tracking, and progress reporting features.",
+      "id": "therapeutic",
+      "title": "Therapeutic",
+      "thumbnail": "/assets/works/thumb-therapeutic.png",
+      "summary": "A healthcare application similar to Alodok, built with Laravel and React TypeScript.",
+      "description": "Therapeutic is a healthcare platform providing online consultation and medical information, inspired by platforms like Alodok. It leverages Laravel for backend and React TypeScript for frontend development.",
       "features": [
-        "Kanban board for task management",
-        "Integrated time tracking",
-        "Real-time team collaboration",
-        "Automatic progress reports"
+        "Online doctor consultation",
+        "User authentication and profile management",
+        "Responsive design with React TypeScript"
       ],
-      "technologies": ["Vue.js", "Laravel", "PostgreSQL", "WebSocket"],
-      "period": "February 2023 - April 2023",
+      "technologies": ["Laravel", "React TypeScript"],
+      "period": "N/A",
       "links": {
-        "demo": "https://taskflow.demo.com",
-        "github": "https://github.com/username/taskflow"
+        "demo": null,
+        "github": null
       }
     },
     {
-      "id": "ai-chatbot",
-      "title": "AI Customer Service Chatbot",
-      "thumbnail": "/images/works/ai-chatbot.jpg",
-      "summary": "AI-powered chatbot for customer service automation",
-      "description": "A chatbot that uses AI technology to provide 24/7 customer service with context understanding and relevant response capabilities.",
+      "id": "workab",
+      "title": "Workab",
+      "thumbnail": "/assets/works/thumb-workab.png",
+      "summary": "An employee management system with attendance via geolocation and QR code, built with Laravel and React TypeScript.",
+      "description": "Workab is an employee management platform that offers attendance tracking using radius/geolocation and QR codes, along with profit and loss calculations for businesses.",
       "features": [
-        "Natural Language Processing",
-        "Adaptive machine learning",
-        "Multi-platform integration",
-        "Customer sentiment analysis"
+        "Attendance via geolocation and QR code",
+        "Profit and loss calculation",
+        "Employee data management"
       ],
-      "technologies": ["Python", "TensorFlow", "FastAPI", "MongoDB"],
-      "period": "November 2022 - January 2023",
+      "technologies": ["Laravel", "React TypeScript"],
+      "period": "N/A",
       "links": {
-        "demo": "https://ai-chatbot.demo.com",
-        "github": "https://github.com/username/ai-chatbot"
+        "demo": null,
+        "github": null
       }
     },
     {
-      "id": "ecotrack",
-      "title": "EcoTrack",
-      "thumbnail": "/images/works/ecotrack.jpg",
-      "summary": "Personal carbon footprint tracking application with eco-friendly recommendations",
-      "description": "An application that helps users understand and reduce their carbon footprint through daily activity tracking and eco-friendly lifestyle recommendations.",
+      "id": "sicawit",
+      "title": "Sicawit",
+      "thumbnail": "/assets/works/thumb-sicawit.png",
+      "summary": "A palm oil plantation management system for financial tracking, built with Laravel and React TypeScript.",
+      "description": "Sicawit is a management system designed for palm oil plantations in Kalimantan, allowing users to track profits and losses daily, monthly, and yearly, including detailed expense records like fertilizer purchases per land area.",
       "features": [
-        "Carbon footprint calculator",
-        "Eco-friendly recommendations",
-        "Carbon reduction progress tracking",
-        "Eco-warriors community"
+        "Profit and loss tracking by date/month/year",
+        "Detailed financial reports per plantation",
+        "Expense tracking per land area"
       ],
-      "technologies": ["Flutter", "Firebase", "Node.js", "MongoDB"],
-      "period": "August 2022 - October 2022",
+      "technologies": ["Laravel", "React TypeScript"],
+      "period": "N/A",
       "links": {
-        "demo": "https://ecotrack.demo.com",
-        "github": "https://github.com/username/ecotrack"
+        "demo": null,
+        "github": null
       }
     },
     {
-      "id": "edulearn",
-      "title": "EduLearn LMS",
-      "thumbnail": "/images/works/edulearn.jpg",
-      "summary": "Online learning platform with interactive features and progress tracking",
-      "description": "A Learning Management System that provides interactive learning experiences with video conferencing, online quizzes, and learning progress tracking features.",
+      "id": "dropship",
+      "title": "Dropship",
+      "thumbnail": "/assets/works/thumb-dropship.png",
+      "summary": "A dropshipping platform built using Next.js TypeScript and Go.",
+      "description": "Dropship is an e-commerce platform facilitating dropshipping businesses, developed with Next.js TypeScript for frontend and Go for backend services.",
       "features": [
-        "Integrated video conferencing",
-        "Online quizzes and assessments",
-        "Student progress tracking",
-        "Interactive discussion forum"
+        "Product management for dropshippers",
+        "Order and shipment tracking",
+        "Integration with supplier APIs"
       ],
-      "technologies": ["React", "Django", "PostgreSQL", "WebRTC"],
-      "period": "May 2022 - July 2022",
+      "technologies": ["Next.js TypeScript", "Go"],
+      "period": "N/A",
       "links": {
-        "demo": "https://edulearn.demo.com",
-        "github": "https://github.com/username/edulearn"
+        "demo": null,
+        "github": null
       }
     },
     {
-      "id": "fintech-wallet",
-      "title": "FinTech Wallet",
-      "thumbnail": "/images/works/fintech-wallet.jpg",
-      "summary": "Digital wallet with personal finance management features",
-      "description": "A digital wallet application that enables users to manage finances, conduct transactions, and analyze expenses easily.",
+      "id": "bastetiproject",
+      "title": "Bastetiproject",
+      "thumbnail": "/assets/works/thumb-baseti.png",
+      "summary": "A landing page for a software house built using Next.js TypeScript.",
+      "description": "Bastetiproject is a professional landing page designed to represent a software house, developed with Next.js TypeScript for modern and SEO-friendly performance.",
       "features": [
-        "Real-time transactions",
-        "Expense analysis",
-        "Budgeting tools",
-        "Bank integration"
+        "Responsive landing page design",
+        "SEO optimization",
+        "Modern UI using Next.js"
       ],
-      "technologies": ["React Native", "Node.js", "PostgreSQL", "Redis"],
-      "period": "February 2022 - April 2022",
+      "technologies": ["Next.js TypeScript"],
+      "period": "N/A",
       "links": {
-        "demo": "https://fintech-wallet.demo.com",
-        "github": "https://github.com/username/fintech-wallet"
+        "demo": null,
+        "github": null
       }
     },
     {
-      "id": "smart-home",
-      "title": "Smart Home Hub",
-      "thumbnail": "/images/works/smart-home.jpg",
-      "summary": "IoT platform for smart home device control and monitoring",
-      "description": "A smart home control system that allows users to control and monitor IoT devices in their homes through mobile or web applications.",
+      "id": "master-bagasi",
+      "title": "Master Bagasi",
+      "thumbnail": "/assets/works/thumb-mb.png",
+      "summary": "An e-commerce platform for a technology company, built with Next.js TypeScript and Laravel.",
+      "description": "Master Bagasi is an e-commerce application developed for a technology company, combining Next.js TypeScript for the frontend and Laravel for the backend to ensure scalability and performance.",
       "features": [
-        "IoT device control",
-        "Energy monitoring",
-        "Home automation",
-        "Voice command integration"
+        "E-commerce product catalog",
+        "Shopping cart and checkout system",
+        "Admin panel for product management"
       ],
-      "technologies": ["React", "Node.js", "MQTT", "InfluxDB"],
-      "period": "November 2021 - January 2022",
+      "technologies": ["Next.js TypeScript", "Laravel"],
+      "period": "N/A",
       "links": {
-        "demo": "https://smart-home.demo.com",
-        "github": "https://github.com/username/smart-home"
+        "demo": null,
+        "github": null
       }
     },
     {
-      "id": "food-delivery",
-      "title": "Food Delivery Platform",
-      "thumbnail": "/images/works/food-delivery.jpg",
-      "summary": "Food delivery platform with real-time tracking and rating system",
-      "description": "A food delivery application that connects customers with local restaurants, featuring real-time tracking and rating system.",
+      "id": "ai-saas",
+      "title": "AI SaaS",
+      "thumbnail": "/assets/works/thumb-ai-saas.png",
+      "summary": "An AI-based SaaS platform offering various AI tools like ChatGPT, Image Generator, and more, built with Next.js TypeScript, Prisma, and GPT-3.5.",
+      "description": "AI SaaS is a platform providing multiple AI-powered tools including conversational AI, image generation, NFT creation, music generation, video generation, and code generation. The platform is built using Next.js TypeScript, Prisma, and integrates OpenAI's GPT-3.5 API.",
       "features": [
-        "Real-time delivery tracking",
-        "Rating and review system",
-        "Integrated payments",
-        "Restaurant dashboard"
+        "AI-powered chatbot (ChatGPT)",
+        "AI Image Generator",
+        "NFT Generator",
+        "Music and Video Generator",
+        "Code Generator"
       ],
-      "technologies": ["React Native", "Node.js", "MongoDB", "Socket.io"],
-      "period": "August 2021 - October 2021",
+      "technologies": ["Next.js TypeScript", "Prisma", "GPT-3.5"],
+      "period": "N/A",
       "links": {
-        "demo": "https://food-delivery.demo.com",
-        "github": "https://github.com/username/food-delivery"
+        "demo": null,
+        "github": null
       }
     }
   ]

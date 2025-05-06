@@ -3,6 +3,7 @@ import works from '@/data/works.json';
 import { ArrowUpRight, Calendar, Github, Globe } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 interface WorksSlugProps {
@@ -80,7 +81,7 @@ export default function WorksSlug({ params }: WorksSlugProps) {
             {/* Description */}
             <section className="aurora-space-y-4">
               <h2 className="aurora-text-2xl aurora-font-semibold">
-                Tentang Proyek
+                About Project
               </h2>
               <div className="aurora-prose dark:aurora-prose-invert aurora-max-w-none">
                 <p>{work.description}</p>
@@ -90,7 +91,7 @@ export default function WorksSlug({ params }: WorksSlugProps) {
             {/* Key Features */}
             <section className="aurora-mt-8">
               <h2 className="aurora-text-2xl aurora-font-semibold aurora-mb-4">
-                Fitur Utama
+                Key Features
               </h2>
               <ul className="aurora-space-y-3">
                 {work.features.map((feature, index) => (
@@ -111,7 +112,7 @@ export default function WorksSlug({ params }: WorksSlugProps) {
             {/* Technologies */}
             <section>
               <h3 className="aurora-text-lg aurora-font-semibold aurora-mb-3">
-                Teknologi
+                Technologies
               </h3>
               <div className="aurora-flex aurora-flex-wrap aurora-gap-2">
                 {work.technologies.map((tech, index) => (
@@ -128,7 +129,7 @@ export default function WorksSlug({ params }: WorksSlugProps) {
             {/* Timeline */}
             <section>
               <h3 className="aurora-text-lg aurora-font-semibold aurora-mb-3">
-                Periode
+                Timeline
               </h3>
               <div className="aurora-flex aurora-items-center aurora-gap-2 aurora-text-gray-600 dark:aurora-text-gray-300">
                 <Calendar className="aurora-w-4 aurora-h-4" />
@@ -139,29 +140,33 @@ export default function WorksSlug({ params }: WorksSlugProps) {
             {/* Links */}
             <section>
               <h3 className="aurora-text-lg aurora-font-semibold aurora-mb-3">
-                Tautan
+                Links
               </h3>
               <div className="aurora-space-y-2">
-                <a
-                  href={work.links.demo}
-                  className="aurora-flex aurora-items-center aurora-gap-2 aurora-text-primary hover:aurora-underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Globe className="aurora-w-4 aurora-h-4" />
-                  <span>Live Demo</span>
-                  <ArrowUpRight className="aurora-w-4 aurora-h-4" />
-                </a>
-                <a
-                  href={work.links.github}
-                  className="aurora-flex aurora-items-center aurora-gap-2 aurora-text-primary hover:aurora-underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github className="aurora-w-4 aurora-h-4" />
-                  <span>Source Code</span>
-                  <ArrowUpRight className="aurora-w-4 aurora-h-4" />
-                </a>
+                {work.links.demo && (
+                  <Link
+                    href={work.links.demo}
+                    className="aurora-flex aurora-items-center aurora-gap-2 aurora-text-primary hover:aurora-underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Globe className="aurora-w-4 aurora-h-4" />
+                    <span>Live Demo</span>
+                    <ArrowUpRight className="aurora-w-4 aurora-h-4" />
+                  </Link>
+                )}
+                {work.links.github && (
+                  <Link
+                    href={work.links.github}
+                    className="aurora-flex aurora-items-center aurora-gap-2 aurora-text-primary hover:aurora-underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="aurora-w-4 aurora-h-4" />
+                    <span>Source Code</span>
+                    <ArrowUpRight className="aurora-w-4 aurora-h-4" />
+                  </Link>
+                )}
               </div>
             </section>
           </aside>

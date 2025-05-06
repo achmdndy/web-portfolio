@@ -1,5 +1,7 @@
 import { Section } from '@/components/section';
+import works from '@/data/works.json';
 import { Metadata } from 'next';
+import { WorkCard } from './_components/work-card';
 
 export const metadata: Metadata = {
   title: 'Works - @achmdndy',
@@ -16,11 +18,17 @@ export default async function Works() {
       </Section>
 
       <div className="aurora-grid aurora-grid-cols-1 md:aurora-grid-cols-2 aurora-gap-6">
-        <Section className="md:aurora-col-span-2 ">
-          <div className="aurora-rounded-lg aurora-mb-6 aurora-p-3 aurora-text-center aurora-bg-primary/10 aurora-backdrop-blur">
-            in development
-          </div>
-        </Section>
+        {works.works.flatMap((work, index) => (
+          <Section key={index}>
+            <WorkCard
+              id={work.id}
+              title={work.title}
+              thumbnail={work.thumbnail}
+            >
+              {work.summary}
+            </WorkCard>
+          </Section>
+        ))}
       </div>
     </div>
   );
