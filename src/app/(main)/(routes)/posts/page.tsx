@@ -16,7 +16,7 @@ export default function Posts() {
       </Section>
 
       <div className="aurora-grid aurora-grid-cols-1 md:aurora-grid-cols-2 aurora-gap-6">
-        <Section className='md:aurora-col-span-2 '>
+        <Section className="md:aurora-col-span-2 ">
           <div className="aurora-rounded-lg aurora-mb-6 aurora-p-3 aurora-text-center aurora-bg-primary/10 aurora-backdrop-blur">
             in development
           </div>

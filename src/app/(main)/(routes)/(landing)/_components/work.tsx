@@ -11,7 +11,29 @@ export function Work() {
       </h3>
 
       <p className="aurora-text-justify aurora-indent-4 aurora-hyphens-auto">
-        I'm a <span className="aurora-text-primary aurora-font-semibold">freelance fullstack dev</span> who's all about building <span className="aurora-text-primary aurora-font-semibold">solid, scalable apps</span> and cracking <span className="aurora-text-primary aurora-font-semibold">tough problems</span> with smart, no-nonsense solutions. Always hungry for the <span className="aurora-text-primary aurora-font-semibold">latest tech</span>, I love turning ideas into <span className="aurora-text-primary aurora-font-semibold">clean, functional software</span> that hits both user needs and business goals. From brainstorming to shipping, I've been there, done that — and I'm always up for pushing the boundaries with awesome teams.
+        I&apos;m a{' '}
+        <span className="aurora-text-primary aurora-font-semibold">
+          freelance fullstack dev
+        </span>{' '}
+        who&apos;s all about building{' '}
+        <span className="aurora-text-primary aurora-font-semibold">
+          solid, scalable apps
+        </span>{' '}
+        and cracking{' '}
+        <span className="aurora-text-primary aurora-font-semibold">
+          tough problems
+        </span>{' '}
+        with smart, no-nonsense solutions. Always hungry for the{' '}
+        <span className="aurora-text-primary aurora-font-semibold">
+          latest tech
+        </span>
+        , I love turning ideas into{' '}
+        <span className="aurora-text-primary aurora-font-semibold">
+          clean, functional software
+        </span>{' '}
+        that hits both user needs and business goals. From brainstorming to
+        shipping, I&apos;ve been there, done that — and I&apos;m always up for
+        pushing the boundaries with awesome teams.
       </p>
 
       <div className="aurora-flex aurora-items-center aurora-justify-center aurora-my-4">

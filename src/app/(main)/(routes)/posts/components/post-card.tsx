@@ -20,7 +20,7 @@ export function PostCard({
   publishDate,
   readTime,
   excerpt,
-  tags
+  tags,
 }: PostCardProps) {
   return (
     <article className="aurora-group aurora-w-full aurora-bg-white/5 aurora-rounded-xl aurora-overflow-hidden hover:aurora-bg-white/10 aurora-transition-all">
@@ -40,7 +40,7 @@ export function PostCard({
         <div className="aurora-p-4">
           {/* Tags */}
           <div className="aurora-flex aurora-flex-wrap aurora-gap-2 aurora-mb-3">
-            {tags.map((tag) => (
+            {tags.map(tag => (
               <span
                 key={tag}
                 className="aurora-px-2 aurora-py-1 aurora-text-xs aurora-bg-primary/10 aurora-text-primary aurora-rounded-full"

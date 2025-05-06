@@ -7,31 +7,33 @@ import { notFound } from 'next/navigation'; // Tambahkan ini
 
 interface PostSlugProps {
   params: {
-    slug: string
-  }
+    slug: string;
+  };
 }
 
-export async function generateMetadata({ params }: PostSlugProps): Promise<Metadata> {
-  const post = posts.posts.find((p) => p.slug === params.slug)
+export async function generateMetadata({
+  params,
+}: PostSlugProps): Promise<Metadata> {
+  const post = posts.posts.find(p => p.slug === params.slug);
 
   if (!post) {
     return {
       title: 'Post Not Found',
       description: 'Artikel yang Anda cari tidak ditemukan',
-    }
+    };
   }
 
   return {
     title: `${post.title} - Blog Post`,
     description: post.excerpt,
-  }
+  };
 }
 
 export default function PostSlug({ params }: PostSlugProps) {
-  const post = posts.posts.find((p) => p.slug === params.slug)
+  const post = posts.posts.find(p => p.slug === params.slug);
 
   if (!post) {
-    notFound()
+    notFound();
   }
 
   return (
@@ -39,18 +41,23 @@ export default function PostSlug({ params }: PostSlugProps) {
       <article className="aurora-container aurora-px-4 aurora-max-w-[65ch] aurora-py-8">
         {/* Breadcrumb */}
         <nav className="aurora-flex aurora-items-center aurora-gap-2 aurora-text-sm aurora-text-gray-500 dark:aurora-text-gray-400 aurora-mb-6">
-          <a href="/posts" className="hover:aurora-text-primary aurora-transition-colors">
+          <a
+            href="/posts"
+            className="hover:aurora-text-primary aurora-transition-colors"
+          >
             Posts
           </a>
           <span>/</span>
-          <span className="aurora-text-gray-700 dark:aurora-text-gray-200">{post.title}</span>
+          <span className="aurora-text-gray-700 dark:aurora-text-gray-200">
+            {post.title}
+          </span>
         </nav>
 
         {/* Header */}
         <header className="aurora-mb-8">
           <div className="aurora-flex aurora-flex-wrap aurora-gap-3 aurora-mb-4">
             {/* Tags */}
-            {post.tags.map((tag) => (
+            {post.tags.map(tag => (
               <span
                 key={tag}
                 className="aurora-px-3 aurora-py-1 aurora-bg-primary/10 aurora-text-primary aurora-rounded-full aurora-text-sm"
@@ -112,5 +119,5 @@ export default function PostSlug({ params }: PostSlugProps) {
         </div>
       </article>
     </Section>
-  )
+  );
 }
