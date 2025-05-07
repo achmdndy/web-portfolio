@@ -1,104 +1,19 @@
 {
   "posts": [
     {
-      "slug": "understanding-react-hooks",
-      "title": "Understanding React Hooks In Depth",
-      "thumbnail": "/images/posts/react-hooks.jpg",
-      "publishDate": "January 22, 2024",
-      "readTime": "10 min read",
-      "excerpt": "A deep exploration of React Hooks, their underlying principles, and practical use cases in real-world applications.",
-      "tags": ["React", "JavaScript", "Web Development"],
-      "content": "React Hooks have transformed how we write React components by enabling state and side-effect management without classes. In this article, we explore the core hooks in depth:\n\n1. **useState**: Understand how useState works under the hood, including its asynchronous nature and batching behavior.\n\n```js\nconst [count, setCount] = useState(0);\nuseEffect(() => {\n  document.title = `Count: ${count}`;\n}, [count]);\n```\n\nWe discuss patterns for updating state based on previous state and handling functional updates.\n\n2. **useEffect**: Dive into lifecycle replacement with useEffect, cleanup functions, dependency arrays, and common pitfalls like stale closures.\n\n3. **Custom Hooks**: Learn how to extract reusable logic with custom hooks, including a case study of a `useFetch` hook for API requests.\n\n4. **Rules of Hooks**: Explore why the rules (only call hooks at the top level and inside React functions) are critical and how React enforces them internally.\n\nAdditionally, we’ll look at how hooks interact with **concurrent rendering** and **React Server Components**.\n\nWe close with best practices for hooks in large codebases, performance optimizations with `useMemo` and `useCallback`, and when it might still be beneficial to use external state libraries."
-    },
-    {
-      "slug": "nextjs-13-app-router",
-      "title": "Getting Started with Next.js 13 App Router",
-      "thumbnail": "/images/posts/nextjs-13.jpg",
-      "publishDate": "January 15, 2024",
-      "readTime": "12 min read",
-      "excerpt": "Explore the powerful new App Router in Next.js 13, including nested layouts, server components, and streaming rendering.",
-      "tags": ["Next.js", "React", "Web Development"],
-      "content": "Next.js 13 introduced a fundamental shift with the **App Router** and **File-based Routing** under `/app`. In this article, we cover:\n\n1. **Understanding App Router**: How it differs from the Pages Router, why it introduces Server Components by default, and the impact on data fetching.\n\n2. **Creating Nested Layouts**: Learn how to structure shared layouts with `layout.tsx` and how to nest them for sub-routes.\n\n```tsx\nexport default function Layout({ children }) {\n  return (\n    <div>\n      <Header />\n      <main>{children}</main>\n    </div>\n  );\n}\n```\n\n3. **Streaming & Suspense**: Leverage React Suspense and streaming SSR for progressive rendering.\n\n4. **Loading & Error UI**: Implement `loading.tsx` and `error.tsx` components for route-specific states.\n\n5. **Client Components vs Server Components**: Discuss when to use `use client` directive, implications on bundle size, and hydration.\n\n6. **Data Fetching Strategies**: Explore `fetch`, `getStaticProps`, `getServerSideProps` replacement with `fetch` inside Server Components.\n\n7. **Migration Path**: Strategies for migrating from `pages/` to `app/` gradually, using parallel routing.\n\nWe wrap up with real-world use cases, integration with CMSs, and upcoming features in the Next.js ecosystem."
-    },
-    {
-      "slug": "tailwind-css-best-practices",
-      "title": "Best Practices in Using Tailwind CSS",
-      "thumbnail": "/images/posts/tailwind.jpg",
-      "publishDate": "January 10, 2024",
-      "readTime": "9 min read",
-      "excerpt": "Maximize Tailwind CSS effectiveness with scalable class management, component extraction, and performance optimization.",
-      "tags": ["CSS", "Tailwind", "Web Development"],
-      "content": "Tailwind CSS provides utility-first classes for rapid styling, but without structure it can lead to bloated HTML. This article covers:\n\n1. **Component Extraction**: Move repeating classnames into **component classes** or use `@apply` in CSS for abstraction.\n\n```css\n.btn-primary {\n  @apply bg-blue-500 text-white px-4 py-2 rounded;\n}\n```\n\n2. **Handling Variants**: Organize responsive, hover, focus states logically in class order for readability.\n\n3. **Class Naming Convention**: Establish conventions for reusable patterns with Tailwind’s **plugin API** for custom utilities.\n\n4. **Integration with Design Systems**: How to integrate Tailwind with a token-based design system.\n\n5. **Performance Optimization**: Deep dive into **purgeCSS** configuration to remove unused classes, including edge cases with dynamic classnames.\n\n6. **Dark Mode Strategies**: `media` vs `class` strategy, pros and cons.\n\n7. **Combining Tailwind & CSS-in-JS**: How to interoperate Tailwind with Emotion or styled-components.\n\nCase study: Migrating a large Bootstrap-based project to Tailwind while ensuring accessibility and maintainability."
-    },
-    {
-      "slug": "typescript-advanced-patterns",
-      "title": "Advanced Patterns in TypeScript",
-      "thumbnail": "/images/posts/typescript.jpg",
-      "publishDate": "January 5, 2024",
-      "readTime": "11 min read",
-      "excerpt": "Master advanced TypeScript patterns like Generics, Utility Types, and Decorators to write safer, scalable code.",
-      "tags": ["TypeScript", "JavaScript", "Programming"],
-      "content": "This article explores advanced TypeScript features that go beyond basic types:\n\n1. **Generics**: Learn how to write reusable components and functions with generics, and how to constrain them for safety.\n\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n```\n\n2. **Utility Types**: Deep dive into built-in types like `Partial`, `Pick`, `Omit`, `Record`, and practical use cases for transforming types dynamically.\n\n3. **Mapped Types & Conditional Types**: Understand how to map over keys and conditionally transform properties for building flexible APIs.\n\n4. **Decorators**: Explore experimental decorators in class-based design patterns, including metadata reflection with `reflect-metadata`.\n\n5. **Discriminated Unions**: Use tagged unions for exhaustive type checking in Redux reducers or complex state machines.\n\n6. **Template Literal Types**: Build string-based type patterns for validating route params, CSS class names, or event names.\n\n7. **Inference Techniques**: Leverage `infer` keyword for extracting inner types in conditional types.\n\nCase study: Building a type-safe API client using generics and mapped types for OpenAPI schema validation."
-    },
-    {
-      "slug": "web-performance-optimization",
-      "title": "Modern Website Performance Optimization",
-      "thumbnail": "/images/posts/web-performance.jpg",
-      "publishDate": "January 1, 2024",
-      "readTime": "12 min read",
-      "excerpt": "Comprehensive guide to website performance optimization for better user experience.",
-      "tags": ["Performance", "Web Development", "Optimization"],
-      "content": "Website performance directly affects user engagement, SEO, and conversions. In this article, we cover:\n\n1. **Core Web Vitals**: Understand metrics like LCP, FID, CLS and their impact on UX.\n\n2. **Image Optimization**: Use modern formats (WebP, AVIF), lazy loading, responsive images with `srcset`, and CDNs.\n\n3. **Code Splitting & Tree Shaking**: Implement dynamic imports, bundle analyzers, and reduce unused JS.\n\n4. **Caching Strategies**: Optimize HTTP caching, service workers, and CDN edge caching.\n\n5. **Third-party Scripts**: Audit impact of analytics, ads, widgets; defer non-critical scripts.\n\n6. **Font Optimization**: Use `font-display: swap`, subset fonts, preload key fonts.\n\n7. **Critical CSS & SSR**: Inline critical CSS, server-side rendering for faster first paint.\n\nCase study: Performance audit of a real e-commerce website using Lighthouse and actionable improvements."
-    },
-    {
-      "slug": "state-management-2024",
-      "title": "State Management in 2024",
-      "thumbnail": "/images/posts/state-management.jpg",
-      "publishDate": "December 28, 2023",
-      "readTime": "9 min read",
-      "excerpt": "A comparison of modern state management libraries and emerging patterns for React applications.",
-      "tags": ["React", "State Management", "JavaScript"],
-      "content": "State management in React continues to evolve. This article compares approaches:\n\n1. **Redux Toolkit**: Modern Redux with simplified setup, immer-powered reducers, RTK Query for data fetching.\n\n2. **Zustand**: Minimalist store with hooks API and no boilerplate.\n\n3. **Jotai**: Atomic state management inspired by Recoil, with fine-grained reactivity.\n\n4. **React Context**: Suitable for low-frequency updates; caution against overuse for high-frequency updates.\n\n5. **Server State vs Client State**: Discuss how libraries like React Query, SWR shift data fetching to a caching layer rather than a state layer.\n\n6. **Signals & Fine-grained Reactivity**: Preview of upcoming patterns from frameworks like SolidJS, and how React might evolve with Signals.\n\nCase study: Migrating from legacy Redux to RTK and reducing boilerplate by 60%."
-    },
-    {
-      "slug": "testing-react-applications",
-      "title": "Testing Modern React Applications",
-      "thumbnail": "/images/posts/testing.jpg",
-      "publishDate": "December 20, 2023",
-      "readTime": "10 min read",
-      "excerpt": "A complete guide to testing React applications using Jest, React Testing Library, and end-to-end tools.",
-      "tags": ["React", "Testing", "JavaScript"],
-      "content": "Testing ensures confidence in your code. This article covers:\n\n1. **Unit Testing with Jest**: Writing isolated tests for pure functions and small components.\n\n2. **React Testing Library**: Focus on testing user behavior, not implementation.\n\n```tsx\nrender(<Button onClick={handleClick}>Click</Button>);\nfireEvent.click(screen.getByText('Click'));\nexpect(handleClick).toHaveBeenCalled();\n```\n\n3. **Mocking API Calls**: Use `msw` (Mock Service Worker) for API request interception during tests.\n\n4. **End-to-End Testing**: Integrate Cypress or Playwright for real browser automation.\n\n5. **Test Coverage**: Measure critical paths; balance coverage metrics with meaningful tests.\n\n6. **CI Integration**: Automate test suites in CI/CD pipelines with caching for faster builds.\n\n7. **Testing Strategies**: Pyramid model, what to test at unit vs integration vs e2e levels.\n\nCase study: Achieving 95% coverage in a design system library with confidence in backward compatibility."
-    },
-    {
-      "slug": "css-modern-layout",
-      "title": "Modern Layout with CSS Grid and Flexbox",
-      "thumbnail": "/images/posts/css-layout.jpg",
-      "publishDate": "December 15, 2023",
-      "readTime": "8 min read",
-      "excerpt": "Master modern layout techniques combining CSS Grid and Flexbox for responsive design.",
-      "tags": ["CSS", "Web Design", "Frontend"],
-      "content": "CSS Grid and Flexbox enable powerful, flexible layouts. This article covers:\n\n1. **When to Use Grid vs Flexbox**: Guidelines for 2D vs 1D layouts.\n\n2. **Grid Template Areas**: Semantic layout naming and reshaping grids responsively.\n\n```css\ndisplay: grid;\ngrid-template-areas:\n  'header header'\n  'sidebar main';\n```\n\n3. **Auto-placement & Minmax**: Control sizing with `auto-fit`, `minmax()`, `fr` units.\n\n4. **Nesting Grid & Flexbox**: Combine for nested responsive designs.\n\n5. **CSS Subgrid (Emerging)**: Preview of native subgrid support and fallback strategies.\n\n6. **Aligning & Justifying Content**: Deep dive into alignment properties and pitfalls.\n\n7. **Accessibility & Source Order**: Ensure logical reading order with visually rearranged grids.\n\nCase study: Building a magazine-style responsive homepage using only CSS Grid."
-    },
-    {
-      "slug": "api-design-principles",
-      "title": "REST API Design Principles",
-      "thumbnail": "/images/posts/api-design.jpg",
-      "publishDate": "December 10, 2023",
-      "readTime": "10 min read",
-      "excerpt": "Complete guide to designing scalable and maintainable REST APIs.",
-      "tags": ["API", "Backend", "Web Development"],
-      "content": "Good API design is crucial. This article explains:\n\n1. **Resource Modeling**: Map real-world entities to RESTful resources.\n\n2. **HTTP Verbs & Status Codes**: Correct use of GET, POST, PUT, PATCH, DELETE; return meaningful status codes.\n\n3. **Filtering, Sorting, Pagination**: Implement query parameters consistently.\n\n4. **Versioning Strategies**: URI vs Header versioning; pros/cons.\n\n5. **Error Handling**: Standardize error responses with codes, messages, documentation.\n\n6. **HATEOAS**: Pros/cons of hypermedia controls.\n\n7. **Rate Limiting & Security**: Implement API keys, OAuth, JWT, rate limiting.\n\nCase study: Redesigning a monolithic API to RESTful microservices."
-    },
-    {
-      "slug": "web-accessibility",
-      "title": "Building Accessible Websites",
-      "thumbnail": "/images/posts/accessibility.jpg",
-      "publishDate": "December 5, 2023",
-      "readTime": "9 min read",
-      "excerpt": "Guide to implementing web accessibility for frontend developers.",
-      "tags": ["Accessibility", "Frontend", "Web Development"],
-      "content": "Accessibility is not optional. This article covers:\n\n1. **Semantic HTML**: Use correct elements for meaning and structure.\n\n2. **Keyboard Navigation**: Ensure focus states, tab order, skip links.\n\n3. **ARIA Roles & Attributes**: When and how to use ARIA without harming accessibility.\n\n4. **Color Contrast & Visual Design**: Test against WCAG guidelines.\n\n5. **Alt Text & Media**: Provide descriptive alt text, captions for media.\n\n6. **Form Accessibility**: Label associations, fieldset/legend, error messaging.\n\n7. **Automated & Manual Testing**: Use tools like axe, Lighthouse, AND manual screen reader testing.\n\nCase study: Retrofitting accessibility into an existing e-commerce platform."
+      "slug": "tech-solidarity-double-standards",
+      "title": "Tech Solidarity and Double Standards: Why #StandWithUkraine, But Not #StandWithPalestine?",
+      "thumbnail": "/assets/posts/tech-solidarity.png",
+      "publishDate": "May 7, 2025",
+      "excerpt": "In the tech world, movements like #StandWithUkraine gained massive traction. But when it comes to Palestine, similar solidarity is often absent. Why does this disparity exist, and what does it say about our community?",
+      "tags": [
+        "Tech Culture",
+        "Politics in Tech",
+        "Ethics",
+        "Palestine",
+        "Ukraine"
+      ],
+      "content": "<div class=\"aurora-max-w-3xl aurora-mx-auto aurora-leading-relaxed aurora-text-gray-800 dark:aurora-text-gray-200\">\n            <header class=\"aurora-mb-12\">\n              <h1 class=\"aurora-text-4xl md:aurora-text-5xl aurora-font-bold aurora-mb-4 aurora-leading-tight\">\n                The Tech Community's Selective Solidarity\n              </h1>\n              <p class=\"aurora-text-xl aurora-text-gray-600 dark:aurora-text-gray-400 aurora-mb-6\">\n                Ukraine vs. Palestine - Why the Different Responses?\n              </p>\n            </header>\n\n            <p class=\"aurora-text-xl aurora-leading-relaxed aurora-mb-8\">\n              In early 2022, when Russia invaded Ukraine, the global tech community responded swiftly. Developer blogs, open-source maintainers, big tech companies, and even browser extensions showed Ukrainian flags or messages of support.\n            </p>\n\n            <blockquote class=\"aurora-my-12 aurora-border-l-4 aurora-border-primary aurora-pl-6 aurora-italic aurora-text-xl\">\n              However, when Israel launched military operations in Gaza—causing thousands of civilian casualties—the same platforms were largely silent. <span class=\"aurora-font-bold aurora-text-primary\">#StandWithPalestine</span> has rarely been amplified by major tech influencers.\n            </blockquote>\n\n            <div class=\"aurora-space-y-12\">\n              <section>\n                <h2 class=\"aurora-text-2xl aurora-font-bold aurora-mb-4\">\n                  Political Sensitivities and Corporate Risk\n                </h2>\n                <p class=\"aurora-text-lg aurora-leading-relaxed\">\n                  Tech companies, especially those headquartered in the West, often align with the geopolitical stance of their host countries. Supporting Ukraine aligned with U.S. and EU policies. Supporting Palestine, however, risks being labeled controversial or even antisemitic, despite being a human rights issue. This makes many organizations opt for <span class=\"aurora-bg-yellow-100 dark:aurora-bg-yellow-900 aurora-px-1\">silence over perceived risk</span>.\n                </p>\n              </section>\n\n              <section>\n                <h2 class=\"aurora-text-2xl aurora-font-bold aurora-mb-4\">\n                  Who Gets Humanized in Tech Media?\n                </h2>\n                <p class=\"aurora-text-lg aurora-leading-relaxed\">\n                  When Ukraine was invaded, tech media humanized Ukrainian developers—highlighting engineers coding in bomb shelters, open-source maintainers fleeing war. Similar stories exist in Gaza, but they're rarely covered. The difference? <span class=\"aurora-font-bold\">Narrative framing</span>. Western media often depicts Eastern Europeans as relatable. Middle Easterners, especially Palestinians, are frequently politicized rather than humanized.\n                </p>\n              </section>\n\n              <section>\n                <h2 class=\"aurora-text-2xl aurora-font-bold aurora-mb-4\">\n                  The Impact of Platform Bias\n                </h2>\n                <div class=\"aurora-grid aurora-gap-6 md:aurora-grid-cols-2 aurora-my-8\">\n                  <div class=\"aurora-bg-gray-50 dark:aurora-bg-gray-800 aurora-p-6 aurora-rounded-lg\">\n                    <h3 class=\"aurora-text-xl aurora-font-bold aurora-mb-3\">Censorship Issues</h3>\n                    <p>Several developers have reported <span class=\"aurora-font-bold\">content takedowns</span> when posting about Palestine. Algorithmic moderation often flags terms like \"Free Palestine\" unfairly.</p>\n                  </div>\n                  <div class=\"aurora-bg-gray-50 dark:aurora-bg-gray-800 aurora-p-6 aurora-rounded-lg\">\n                    <h3 class=\"aurora-text-xl aurora-font-bold aurora-mb-3\">Selective Activism</h3>\n                    <p>The developer community prides itself on ethics, yet shows <span class=\"aurora-font-bold\">selective outrage</span>. We rally behind 'safe' issues but ignore others equally urgent.</p>\n                  </div>\n                </div>\n              </section>\n\n              <section>\n                <h2 class=\"aurora-text-2xl aurora-font-bold aurora-mb-4\">\n                  Moving Forward: What Can We Do?\n                </h2>\n                <div class=\"aurora-grid aurora-gap-4 md:aurora-grid-cols-2 aurora-my-8\">\n                  <div class=\"aurora-flex aurora-items-start aurora-gap-3\">\n                    <span class=\"aurora-text-primary aurora-font-bold\">01.</span>\n                    <div>\n                      <h3 class=\"aurora-font-bold aurora-mb-2\">Normalize borderless solidarity</h3>\n                      <p>Support human rights, not just popular narratives</p>\n                    </div>\n                  </div>\n                  <div class=\"aurora-flex aurora-items-start aurora-gap-3\">\n                    <span class=\"aurora-text-primary aurora-font-bold\">02.</span>\n                    <div>\n                      <h3 class=\"aurora-font-bold aurora-mb-2\">Amplify voices</h3>\n                      <p>Give platform to suppressed communities</p>\n                    </div>\n                  </div>\n                </div>\n              </section>\n            </div>\n\n            <section class=\"aurora-mt-16 aurora-mb-12\">\n              <blockquote class=\"aurora-text-2xl aurora-italic aurora-text-center aurora-mb-6\">\n                \"Injustice anywhere is a threat to justice everywhere.\"\n                <footer class=\"aurora-text-base aurora-mt-2 aurora-text-gray-600 dark:aurora-text-gray-400\">\n                  — Martin Luther King Jr.\n                </footer>\n              </blockquote>\n              <p class=\"aurora-text-lg aurora-text-center aurora-font-bold\">\n                We must ask ourselves: are we truly inclusive, or just selectively comfortable?\n              </p>\n            </section>\n          </div>"
     }
   ]
 }

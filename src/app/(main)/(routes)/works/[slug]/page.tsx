@@ -66,7 +66,7 @@ export default function WorksSlug({ params }: WorksSlugProps) {
         </header>
 
         {/* Featured Image */}
-        <div className="aurora-relative aurora-aspect-video aurora-w-full aurora-rounded-xl aurora-overflow-hidden aurora-mb-8 aurora-shadow-lg">
+        <div className="aurora-relative aurora-aspect-video aurora-w-full aurora-rounded-xl aurora-overflow-hidden aurora-mb-8">
           <Image
             src={work.thumbnail}
             alt={`${work.title} Preview`}

@@ -1,4 +1,4 @@
-import { Calendar, Clock } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ComponentProps } from 'react';
@@ -8,7 +8,6 @@ type PostCardProps = ComponentProps<'div'> & {
   title: string;
   thumbnail: string;
   publishDate: string;
-  readTime: string;
   excerpt: string;
   tags: string[];
 };
@@ -18,7 +17,6 @@ export function PostCard({
   title,
   thumbnail,
   publishDate,
-  readTime,
   excerpt,
   tags,
 }: PostCardProps) {
@@ -51,7 +49,7 @@ export function PostCard({
           </div>
 
           {/* Title */}
-          <h2 className="aurora-text-xl aurora-font-semibold aurora-mb-2 group-hover:aurora-text-primary aurora-transition-colors">
+          <h2 className="aurora-line-clamp-2 aurora-text-xl aurora-font-semibold aurora-mb-2 group-hover:aurora-text-primary aurora-transition-colors">
             {title}
           </h2>
 
@@ -65,10 +63,6 @@ export function PostCard({
             <div className="aurora-flex aurora-items-center aurora-gap-1">
               <Calendar className="aurora-w-4 aurora-h-4" />
               <span>{publishDate}</span>
-            </div>
-            <div className="aurora-flex aurora-items-center aurora-gap-1">
-              <Clock className="aurora-w-4 aurora-h-4" />
-              <span>{readTime}</span>
             </div>
           </div>
         </div>

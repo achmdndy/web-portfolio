@@ -1,5 +1,7 @@
 import { Section } from '@/components/section';
+import posts from '@/data/posts.json';
 import { Metadata } from 'next';
+import { PostCard } from './components/post-card';
 
 export const metadata: Metadata = {
   title: 'Posts - @achmdndy',
@@ -16,11 +18,18 @@ export default function Posts() {
       </Section>
 
       <div className="aurora-grid aurora-grid-cols-1 md:aurora-grid-cols-2 aurora-gap-6">
-        <Section className="md:aurora-col-span-2 ">
-          <div className="aurora-rounded-lg aurora-mb-6 aurora-p-3 aurora-text-center aurora-bg-primary/10 aurora-backdrop-blur">
-            in development
-          </div>
-        </Section>
+        {posts.posts.map((post, index) => (
+          <Section key={index}>
+            <PostCard
+              slug={post.slug}
+              title={post.title}
+              thumbnail={post.thumbnail}
+              publishDate={post.publishDate}
+              excerpt={post.excerpt}
+              tags={post.tags}
+            />
+          </Section>
+        ))}
       </div>
     </div>
   );

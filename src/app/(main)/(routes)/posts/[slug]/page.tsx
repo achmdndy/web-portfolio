@@ -1,9 +1,9 @@
 import { Section } from '@/components/section';
-import posts from '@/data/posts.json'; // Tambahkan ini
-import { Calendar, Clock } from 'lucide-react';
+import posts from '@/data/posts.json';
+import { Calendar } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { notFound } from 'next/navigation'; // Tambahkan ini
+import { notFound } from 'next/navigation';
 
 interface PostSlugProps {
   params: {
@@ -19,7 +19,7 @@ export async function generateMetadata({
   if (!post) {
     return {
       title: 'Post Not Found',
-      description: 'Artikel yang Anda cari tidak ditemukan',
+      description: 'The requested article could not be found',
     };
   }
 
@@ -48,7 +48,7 @@ export default function PostSlug({ params }: PostSlugProps) {
             Posts
           </a>
           <span>/</span>
-          <span className="aurora-text-gray-700 dark:aurora-text-gray-200">
+          <span className="aurora-text-gray-700 dark:aurora-text-gray-200 aurora-line-clamp-1 aurora-w-1/2">
             {post.title}
           </span>
         </nav>
@@ -77,10 +77,6 @@ export default function PostSlug({ params }: PostSlugProps) {
               <Calendar className="aurora-w-4 aurora-h-4" />
               <time dateTime={post.publishDate}>{post.publishDate}</time>
             </div>
-            <div className="aurora-flex aurora-items-center aurora-gap-1">
-              <Clock className="aurora-w-4 aurora-h-4" />
-              <span>{post.readTime}</span>
-            </div>
           </div>
         </header>
 
@@ -96,14 +92,15 @@ export default function PostSlug({ params }: PostSlugProps) {
         </div>
 
         {/* Content */}
-        <div className="aurora-prose dark:aurora-prose-invert aurora-max-w-none">
-          <p>{post.content}</p>
-        </div>
+        <div
+          className="aurora-prose dark:aurora-prose-invert aurora-max-w-none"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
 
         {/* Share Section */}
-        <div className="aurora-border-t aurora-border-gray-200 dark:aurora-border-gray-800 aurora-mt-12 aurora-pt-8">
+        {/* <div className="aurora-border-t aurora-border-gray-200 dark:aurora-border-gray-800 aurora-mt-12 aurora-pt-8">
           <h3 className="aurora-text-lg aurora-font-semibold aurora-mb-4">
-            Bagikan Artikel
+            Share Article
           </h3>
           <div className="aurora-flex aurora-gap-4">
             <button className="aurora-px-4 aurora-py-2 aurora-bg-primary/10 aurora-text-primary aurora-rounded-lg hover:aurora-bg-primary/20 aurora-transition-colors">
@@ -116,7 +113,7 @@ export default function PostSlug({ params }: PostSlugProps) {
               Facebook
             </button>
           </div>
-        </div>
+        </div> */}
       </article>
     </Section>
   );
