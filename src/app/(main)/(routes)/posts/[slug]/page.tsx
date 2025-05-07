@@ -1,5 +1,5 @@
 import { Section } from '@/components/section';
-import posts from '@/data/posts.json';
+import { posts } from '@/data/posts';
 import { Calendar } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -14,7 +14,7 @@ interface PostSlugProps {
 export async function generateMetadata({
   params,
 }: PostSlugProps): Promise<Metadata> {
-  const post = posts.posts.find(p => p.slug === params.slug);
+  const post = posts.find(p => p.slug === params.slug);
 
   if (!post) {
     return {
@@ -30,7 +30,7 @@ export async function generateMetadata({
 }
 
 export default function PostSlug({ params }: PostSlugProps) {
-  const post = posts.posts.find(p => p.slug === params.slug);
+  const post = posts.find(p => p.slug === params.slug);
 
   if (!post) {
     notFound();
@@ -92,10 +92,9 @@ export default function PostSlug({ params }: PostSlugProps) {
         </div>
 
         {/* Content */}
-        <div
-          className="aurora-prose dark:aurora-prose-invert aurora-max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <div className="aurora-prose dark:aurora-prose-invert aurora-max-w-none">
+          <post.content />
+        </div>
 
         {/* Share Section */}
         {/* <div className="aurora-border-t aurora-border-gray-200 dark:aurora-border-gray-800 aurora-mt-12 aurora-pt-8">

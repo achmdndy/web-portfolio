@@ -1,5 +1,5 @@
 import { Section } from '@/components/section';
-import works from '@/data/works.json';
+import { works } from '@/data/works';
 import { Metadata } from 'next';
 import { WorkCard } from './_components/work-card';
 
@@ -18,7 +18,7 @@ export default async function Works() {
       </Section>
 
       <div className="aurora-grid aurora-grid-cols-1 md:aurora-grid-cols-2 aurora-gap-6">
-        {works.works.flatMap((work, index) => (
+        {works.flatMap((work, index) => (
           <Section key={index}>
             <WorkCard
               id={work.id}

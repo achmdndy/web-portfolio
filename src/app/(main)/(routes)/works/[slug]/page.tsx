@@ -1,6 +1,6 @@
 import { Section } from '@/components/section';
 import { Button } from '@/components/ui/button';
-import works from '@/data/works.json';
+import { works } from '@/data/works';
 import { ArrowUpRight, Calendar, Github, Globe } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -16,7 +16,7 @@ interface WorksSlugProps {
 export async function generateMetadata({
   params,
 }: WorksSlugProps): Promise<Metadata> {
-  const work = works.works.find(w => w.id === params.slug);
+  const work = works.find(w => w.id === params.slug);
 
   if (!work) {
     return {
@@ -32,7 +32,7 @@ export async function generateMetadata({
 }
 
 export default function WorksSlug({ params }: WorksSlugProps) {
-  const work = works.works.find(w => w.id === params.slug);
+  const work = works.find(w => w.id === params.slug);
 
   if (!work) {
     notFound();

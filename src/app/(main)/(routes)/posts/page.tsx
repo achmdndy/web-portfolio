@@ -1,5 +1,5 @@
 import { Section } from '@/components/section';
-import posts from '@/data/posts.json';
+import { posts } from '@/data/posts';
 import { Metadata } from 'next';
 import { PostCard } from './components/post-card';
 
@@ -18,7 +18,7 @@ export default function Posts() {
       </Section>
 
       <div className="aurora-grid aurora-grid-cols-1 md:aurora-grid-cols-2 aurora-gap-6">
-        {posts.posts.map((post, index) => (
+        {posts.map((post, index) => (
           <Section key={index}>
             <PostCard
               slug={post.slug}
