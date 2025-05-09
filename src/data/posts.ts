@@ -1,5 +1,4 @@
 import { TechSolidarity } from '@/app/(main)/(routes)/posts/components/detail/tech-solidarity';
-import { VercelIsrael } from '@/app/(main)/(routes)/posts/components/detail/vercel-israel';
 
 export const posts = [
   {
@@ -18,16 +17,5 @@ export const posts = [
       'Ukraine',
     ],
     content: TechSolidarity,
-  },
-  {
-    slug: 'vercel-ceo-israel-visit-reaction',
-    title:
-      'Tech, Ethics, and Geopolitics: Reactions to Vercel CEO’s Visit to Israel',
-    thumbnail: '/assets/posts/vercel-israel.png',
-    publishDate: 'May 7, 2025',
-    excerpt:
-      'Guillermo Rauch, CEO of Vercel, recently posted from Israel and sparked mixed reactions online. Should personal travel of tech leaders be scrutinized when geopolitics are involved? What does it mean for developer communities worldwide?',
-    tags: ['Tech Culture', 'Geopolitics', 'Ethics', 'Vercel', 'Open Source'],
-    content: VercelIsrael,
   },
 ];
